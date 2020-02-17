@@ -11,22 +11,21 @@ public class MainActivity extends AppCompatActivity {
     private int countFamily = 0;
     private int countChild = 0;
 
-
-
     public void btnFamily(View view) {
-        if (countFamily<6) {
+
             displayFam(++countFamily);
-        }
-        else {
+
+        if (countFamily == 6) {
+            displayFam(0);
             countFamily = 0;
         }
-    }
 
+    }
     public void btnChild(View view) {
-        if (countChild<4) {
-            displayChild(++countChild);
-        }
-        else {
+
+        displayChild(++countChild);
+        if (countChild == 5) {
+            displayChild(0);
             countChild = 0;
         }
     }
