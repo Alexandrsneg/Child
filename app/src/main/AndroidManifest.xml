@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/deli1"
+        android:icon="@drawable/deli3"
         android:label="Дели доли"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
