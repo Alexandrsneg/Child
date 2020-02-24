@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
             return;
         }
+        //прячем клавиатуру с поля ввода inputEditText1  при нажатии на btnOrder
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(inputEditText1.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
 
         EditText inputEditText2 = (EditText) findViewById(R.id.editText2);
@@ -72,11 +75,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
             return;
         }
+        //прячем клавиатуру с поля ввода inputEditText2  при нажатии на btnOrder
+        imm.hideSoftInputFromWindow(inputEditText2.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
+
         // считывание сумм квартиры и сертификата с EditText(ов)
         flatCoast = Float.parseFloat(inputEditText1.getText().toString());
         matCap = Float.parseFloat(inputEditText2.getText().toString());
-
-
 
         float childPart = (matCap/flatCoast/countFamily);
         displayChildPart(childPart);
